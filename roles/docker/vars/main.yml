@@ -1,0 +1,12 @@
+list_of_packages:
+  - ca-certificates
+  - curl
+  - gnupg
+  - git
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin

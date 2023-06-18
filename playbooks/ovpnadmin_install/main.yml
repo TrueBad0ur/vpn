@@ -1,0 +1,5 @@
+- name: Install ovpn-admin
+  hosts: servers
+  gather_facts: true
+  roles:
+    - ovpnadmin

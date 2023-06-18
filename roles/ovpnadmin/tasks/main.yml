@@ -1,0 +1,15 @@
+- name: Delete drectory
+  shell: "rm -rf /home/kick/ovpn"
+
+- name: Download ovpn-admin
+  shell: "git clone https://github.com/TrueBad0ur/ovpn-admin.git /home/kick/ovpn"
+
+- name: Run docker container
+  become: true
+  register: dockeroutput
+  shell:
+    cmd: ./start.sh
+    chdir: /home/kick/ovpn/
+  
+
+- debug: var=dockeroutput.stdout_lines
